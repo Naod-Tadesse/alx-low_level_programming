@@ -8,16 +8,9 @@
  */
 void print_array(int *a, int n)
 {
-	int len, i;
+	int i;
 
-	len = 0;
-
-	while (str[len] != '\0')
-	{
-		len++;
-	}
-
-	for ( i = 0; i <= n; i++)
+	for (i = 0; i <= n; i++)
 	{
 		if (i == 0)
 		{
