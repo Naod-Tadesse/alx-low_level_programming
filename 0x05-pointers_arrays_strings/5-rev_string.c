@@ -19,15 +19,10 @@ void rev_string(char *s)
 
 	len1 = len - 1;
 
-	char tmpo[len];
-	int j = 0;
-
-	j = len1
-
-	for (i = 0; i < len; i--)
+	for (i = 0; i < len / 2; i++)
 	{
-		tmpo[j]	= s[i]
-		j--;
+		tmp = s[i];
+		s[i] = s[len1];
+		s[len1--] = tmp;
 	}
-	s = tmpo;
 }
