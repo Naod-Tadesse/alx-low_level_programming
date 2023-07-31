@@ -1,7 +1,7 @@
 #include "main.h"
 /**
 *_strpbrk - The _strpbrk() function locates the first
-* occurrence in the string s 
+* occurrence in the string s
 *
 *@s: string where search is made
 *@accept: string where searched bytes are located
