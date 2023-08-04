@@ -1,1 +1,1 @@
-c static libraray
+static
