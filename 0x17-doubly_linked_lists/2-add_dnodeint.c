@@ -1,6 +1,6 @@
 #include "lists.h"
 #include <stdlib.h>
-
+#include <stddef.h>
 /**
  * add_dnodeint - add new node at beginning
  * @head: Pointer to head
@@ -25,5 +25,5 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 
 	*head = new;
 
-	return new;
+	return (new);
 }
