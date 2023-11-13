@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * _strstr - return first occurence of sub string
  * @haystack: search to be made in

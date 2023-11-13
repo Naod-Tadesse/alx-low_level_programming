@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * _abs - this function gives the absolute value of given integer
  * @n: number

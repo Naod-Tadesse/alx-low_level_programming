@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * _puts - this function prints string
  * @str: string pointer

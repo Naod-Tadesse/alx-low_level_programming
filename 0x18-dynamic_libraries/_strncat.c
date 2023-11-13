@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * _strncat - this function to concat strings up to n chars
  * @dest: destination

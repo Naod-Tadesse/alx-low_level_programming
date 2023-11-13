@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * _isalpha- if given char is alphabet
  * @c: given character

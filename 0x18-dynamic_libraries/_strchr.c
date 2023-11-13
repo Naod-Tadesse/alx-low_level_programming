@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * _strchr - pointer to first occerence
  * @s: str

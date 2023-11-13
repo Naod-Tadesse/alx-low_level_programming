@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  *_strspn - no of bytes search
  * @s: the segment

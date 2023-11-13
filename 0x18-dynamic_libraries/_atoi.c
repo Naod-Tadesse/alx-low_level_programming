@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * _atoi - this function changes string to integer
  * @s: string to change

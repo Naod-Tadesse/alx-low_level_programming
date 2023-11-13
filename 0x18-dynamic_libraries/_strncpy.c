@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * _strncpy - this functions copies string up to n values
  * @dest: destination
