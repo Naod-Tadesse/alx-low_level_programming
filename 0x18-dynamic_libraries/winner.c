@@ -1,6 +1,3 @@
-#include <unistd.h>
-#include <string.h>
-
 int rand()
 {
 	static int num = -1;
