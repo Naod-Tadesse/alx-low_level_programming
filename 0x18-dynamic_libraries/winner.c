@@ -1,3 +1,5 @@
+#include "main.h"
+
 int rand()
 {
 	static int num = -1;
@@ -16,5 +18,5 @@ int rand()
 	if (num == 5)
 		return 74;
 
-	return num * num % 30000;
+	return (num * num % 30000);
 }
