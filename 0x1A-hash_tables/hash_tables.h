@@ -35,4 +35,30 @@ hash_table_t *hash_table_create(unsigned long int size);
 unsigned long int hash_djb2(const unsigned char *str);
 unsigned long int key_index(const unsigned char *key, unsigned long int size);
 int hash_table_set(hash_table_t *ht, const char *key, const char *value);
+
+
+
+static inline hash_node_t *create_node(const char *key, const char *value, hash_table_t *ht, unsigned int index) {
+    hash_node_t *create_new;
+
+    char *cp;
+    cp = strdup(value);
+    if (!cp)
+        return NULL;
+    create_new = malloc(sizeof(hash_node_t));
+    if (!create_new) {
+        free(cp);
+        return NULL;
+    }
+    create_new->key = strdup(key);
+    if (!create_new->key) {
+        free(create_new);
+        return NULL;
+    }
+    create_new->next = ht->array[index];
+    create_new->value = cp;
+    ht->array[index] = create_new;
+    return create_new;
+}
+
 #endif
