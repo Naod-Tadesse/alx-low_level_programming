@@ -17,7 +17,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	cp = strdup(value);
 	if (!cp)
 		return (0);
-	if (!ht || !key || !value)
+	if (*key == '\0' || !ht || !key || !value)
 	{
 		free(cp);
 		return (0);
@@ -50,7 +50,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		if (!create_new->key)
 		{
 			free(create_new);
-			free(cp);
 			return (0);
 		}
 		create_new->next = ht->array[index];
