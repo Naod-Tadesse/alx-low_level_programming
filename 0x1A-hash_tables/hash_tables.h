@@ -10,6 +10,7 @@
  * @value: The value corresponding to a key
  * @next: A pointer to the next node of the List
  */
+#include <stdio.h>
 typedef struct hash_node_s
 {
 	char *key;
@@ -36,7 +37,7 @@ unsigned long int hash_djb2(const unsigned char *str);
 unsigned long int key_index(const unsigned char *key, unsigned long int size);
 int hash_table_set(hash_table_t *ht, const char *key, const char *value);
 char *hash_table_get(const hash_table_t *ht, const char *key);
-
+void hash_table_print(const hash_table_t *ht);
 
 static inline hash_node_t *create_node(const char *k, const char *val,
 					hash_table_t *ht, unsigned int in)
