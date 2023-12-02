@@ -12,7 +12,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned int index;
 	hash_node_t *exists,  *rt;
-	
+
 	if (*key == '\0' || !ht || !key || !value)
 	{
 		return (0);
@@ -23,16 +23,16 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		exists = ht->array[index];
 		while (exists)
 		{
-			if(strcmp(exists->key,key) == 0)
+			if (strcmp(exists->key, key) == 0)
 			{
 				free(exists->value);
 				exists->value = strdup(value);
-				return 1;
+				return (1);
 			}
 			exists = exists->next;
 		}
 	}
-	if(!ht->array[index])
+	if (!ht->array[index])
 	{
 jump:		rt = create_node(key, value, ht, index);
 

@@ -38,27 +38,31 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value);
 
 
 
-static inline hash_node_t *create_node(const char *key, const char *value, hash_table_t *ht, unsigned int index) {
-    hash_node_t *create_new;
+static inline hash_node_t *create_node(const char *k, const char *val,
+					hash_table_t *ht, unsigned int in)
+{
+	hash_node_t *create_new;
+	char *cp;
 
-    char *cp;
-    cp = strdup(value);
-    if (!cp)
-        return NULL;
-    create_new = malloc(sizeof(hash_node_t));
-    if (!create_new) {
-        free(cp);
-        return NULL;
-    }
-    create_new->key = strdup(key);
-    if (!create_new->key) {
-        free(create_new);
-        return NULL;
-    }
-    create_new->next = ht->array[index];
-    create_new->value = cp;
-    ht->array[index] = create_new;
-    return create_new;
+	cp = strdup(val);
+	if (!cp)
+		return (NULL);
+	create_new = malloc(sizeof(hash_node_t));
+	if (!create_new)
+	{
+		free(cp);
+		return (NULL);
+	}
+	create_new->key = strdup(k);
+	if (!create_new->key)
+	{
+		free(create_new);
+		return (NULL);
+	}
+	create_new->next = ht->array[in];
+	create_new->value = cp;
+	ht->array[in] = create_new;
+	return (create_new);
 }
 
 #endif
