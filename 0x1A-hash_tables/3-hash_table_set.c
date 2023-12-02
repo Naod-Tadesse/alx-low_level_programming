@@ -10,7 +10,8 @@
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned int index, rt;
+	unsigned int index;
+	int rt = 0;
 	hash_node_t *exists, *create_new;
 	char *cp;
 
@@ -43,12 +44,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		create_new = malloc(sizeof(hash_node_t));
 		if (!create_new)
 		{
+			rt = 0;
 			free(cp);
 			return (0);
 		}
 		create_new->key = strdup(key);
 		if (!create_new->key)
 		{
+			rt = 0;
 			free(create_new);
 			return (0);
 		}
