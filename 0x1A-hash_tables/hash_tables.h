@@ -2,6 +2,7 @@
 #define HASH_H
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 /**
  * struct hash_node_s - Node of a hash table
  *
@@ -10,7 +11,7 @@
  * @value: The value corresponding to a key
  * @next: A pointer to the next node of the List
  */
-#include <stdio.h>
+
 typedef struct hash_node_s
 {
 	char *key;
@@ -31,7 +32,6 @@ typedef struct hash_table_s
 	unsigned long int size;
 	hash_node_t **array;
 } hash_table_t;
-
 
 /**
  * struct shash_node_s - Node of a sorted hash table
@@ -69,9 +69,6 @@ typedef struct shash_table_s
 	shash_node_t *shead;
 	shash_node_t *stail;
 } shash_table_t;
-
-
-
 
 
 hash_table_t *hash_table_create(unsigned long int size);
